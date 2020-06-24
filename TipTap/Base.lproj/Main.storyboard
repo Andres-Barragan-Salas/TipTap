@@ -47,6 +47,37 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bs9-1i-6Zn">
+                                        <rect key="frame" x="8" y="175" width="327" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="" image="person.2.fill" catalog="system"/>
+                                            <segment title="" image="person.3.fill" catalog="system"/>
+                                            <segment title="" image="4.alt.circle.fill" catalog="system"/>
+                                            <segment title="" image="5.circle.fill" catalog="system"/>
+                                            <segment title="" image="6.circle.fill" catalog="system"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="onEdit:" destination="BYZ-38-t0r" eventType="valueChanged" id="5fO-ku-M9I"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-0Z-0Tw">
+                                        <rect key="frame" x="256" y="237.66666666666669" width="57" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-da-P5O">
+                                        <rect key="frame" x="230" y="256.66666666666669" width="18" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-fx-gEQ">
+                                        <rect key="frame" x="21" y="245" width="194" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -95,10 +126,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="JlD-Z0-Lza" id="B0O-Yx-e1E"/>
+                        <outlet property="numberOfPersonsControl" destination="bs9-1i-6Zn" id="AYp-pj-avv"/>
                         <outlet property="tipControl" destination="vDR-4T-5Pq" id="O3x-1H-KHi"/>
                         <outlet property="tipLabel" destination="WVa-64-2hE" id="9oD-8t-ZQc"/>
                         <outlet property="tipTotalView" destination="SoI-k0-rqa" id="Ohf-11-vP3"/>
                         <outlet property="totalLabel" destination="ei5-wR-hdZ" id="FdY-x5-MOh"/>
+                        <outlet property="totalPerPerson" destination="7Sj-fx-gEQ" id="VPj-rj-nES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,4 +202,13 @@
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="4.alt.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="5.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="6.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

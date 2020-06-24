@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 @property (weak, nonatomic) IBOutlet UIView *tipTotalView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *numberOfPersonsControl;
+@property (weak, nonatomic) IBOutlet UILabel *totalPerPerson;
 
 @end
 
@@ -43,12 +45,15 @@
     NSArray *percentages = @[@(0.15), @(0.2), @(0.22)];
     
     double tipPercentage = [percentages[self.tipControl.selectedSegmentIndex] doubleValue];
+    long numberOfPersons = self.numberOfPersonsControl.selectedSegmentIndex + 2;
     
     double tip = tipPercentage * bill;
     double total = bill + tip;
+    double totalPersonQuantity = total/numberOfPersons;
     
     self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
+    self.totalPerPerson.text = [NSString stringWithFormat:@"$%.2f", totalPersonQuantity];
 }
 
 - (IBAction)onEditingBegin:(id)sender {
