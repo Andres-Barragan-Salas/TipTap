@@ -34,7 +34,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Starting to use XCode for the first time was a challenge itself, even more considering the use of an updated version from the one being used in the videos. Another challenge I faced was dealing with the display size/ratio of the simulator, as it differed from the one shown in the development display. Finally, using and understandint the controller lifecycle was difficult at the beginning but quite usefull once understanded. 
+Starting to use XCode for the first time was a challenge itself, even more considering the use of an updated version from the one being used in the videos. Another challenge I faced was dealing with the display size/ratio of the simulator, as it differed from the one shown in the development display. Finally, using and understanding the controller lifecycle was difficult at the beginning but quite usefull once understanded. 
 
 ## Credits
 
