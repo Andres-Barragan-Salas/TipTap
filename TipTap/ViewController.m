@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
+@property (weak, nonatomic) IBOutlet UIView *tipTotalView;
 
 @end
 
@@ -22,6 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [self.tipControl setSelectedSegmentIndex:[defaults integerForKey:@"default_tip"]];
+    [self onEdit:self];
 }
 
 - (IBAction)onTap:(id)sender {
@@ -38,13 +47,16 @@
     double tip = tipPercentage * bill;
     double total = bill + tip;
     
-    self.tipLabel.text = [NSString stringWithFormat:@"$%f", tip];
-    self.totalLabel.text = [NSString stringWithFormat:@"$%f", total];
+    self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
+    self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
 }
 
 - (IBAction)onEditingBegin:(id)sender {
-    [UIView animateWithDuration:0.2 animations:^{
-    self.billField.frame = CGRectMake(self.billField.frame.origin.x, self.billField.frame.origin.y + 30, self.billField.frame.size.width, self.billField.frame.size.height);
+    CGRect newFrame = self.tipTotalView.frame;
+    newFrame.origin.y += 300;
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        self.tipTotalView.frame = newFrame;
     }];
     
     [UIView animateWithDuration:1 animations:^{
@@ -53,11 +65,11 @@
 }
 
 - (IBAction)onEditingEnd:(id)sender {
-    CGRect newFrame = self.billField.frame;
-    newFrame.origin.y -= 30;
+    CGRect newFrame = self.tipTotalView.frame;
+    newFrame.origin.y -= 300;
     
-    [UIView animateWithDuration:0.2 animations:^{
-        self.billField.frame = newFrame;
+    [UIView animateWithDuration:0.4 animations:^{
+        self.tipTotalView.frame = newFrame;
     }];
     
     [UIView animateWithDuration:1 animations:^{

@@ -16,6 +16,7 @@
 		2B46117124A29F5500C50001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46117024A29F5500C50001 /* main.m */; };
 		2B46117B24A29F5600C50001 /* TipTapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46117A24A29F5600C50001 /* TipTapTests.m */; };
 		2B46118624A29F5600C50001 /* TipTapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46118524A29F5600C50001 /* TipTapUITests.m */; };
+		2B46119524A2C89B00C50001 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46119424A2C89B00C50001 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		2B46118124A29F5600C50001 /* TipTapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipTapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B46118524A29F5600C50001 /* TipTapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipTapUITests.m; sourceTree = "<group>"; };
 		2B46118724A29F5600C50001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B46119324A2C89B00C50001 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2B46119424A2C89B00C50001 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				2B46116424A29F5300C50001 /* ViewController.h */,
 				2B46116524A29F5300C50001 /* ViewController.m */,
 				2B46116724A29F5300C50001 /* Main.storyboard */,
+				2B46119324A2C89B00C50001 /* SettingsViewController.h */,
+				2B46119424A2C89B00C50001 /* SettingsViewController.m */,
 				2B46116A24A29F5500C50001 /* Assets.xcassets */,
 				2B46116C24A29F5500C50001 /* LaunchScreen.storyboard */,
 				2B46116F24A29F5500C50001 /* Info.plist */,
@@ -269,6 +274,7 @@
 			files = (
 				2B46116624A29F5300C50001 /* ViewController.m in Sources */,
 				2B46116024A29F5300C50001 /* AppDelegate.m in Sources */,
+				2B46119524A2C89B00C50001 /* SettingsViewController.m in Sources */,
 				2B46117124A29F5500C50001 /* main.m in Sources */,
 				2B46116324A29F5300C50001 /* SceneDelegate.m in Sources */,
 			);
