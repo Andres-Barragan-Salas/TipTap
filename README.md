@@ -2,7 +2,7 @@
 
 **TipTap** is a tip calculator application for iOS.
 
-Submitted by: **Andres Barragan*
+Submitted by: **Andres Barragan**
 
 Time spent: **5** hours spent in total
 
